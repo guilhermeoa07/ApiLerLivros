@@ -5,12 +5,15 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon --exec sucrase-node ./src/puppeteer/index.js"
+    "dev": "nodemon --exec sucrase-node ./src/puppeteer/index.js",
+    "debug": "node --inspect-brk -r sucrase/register src/index.js"
   },
   "dependencies": {
+    "cassandra-driver": "^4.5.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.10",
     "puppeteer": "^3.0.1"
   },
   "devDependencies": {

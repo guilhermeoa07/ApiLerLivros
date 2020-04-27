@@ -1,6 +1,10 @@
-import 'dotenv/config'
-import cors from 'cors'
-import express from 'express'
+require('dotenv/config')
+const cors = require('cors')
+const express = require('express')
+
+const { Scrapping } = require('./puppeteer/Scrapping')
+
+Scrapping().then((value) => console.log(value))
 
 const app = express()
 // Permite acesso externo
